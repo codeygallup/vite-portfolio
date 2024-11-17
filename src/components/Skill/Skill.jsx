@@ -3,7 +3,6 @@ import { faArrowsSpin, faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { faFreeCodeCamp, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { techList } from "./technology-list";
-import "./skills.css";
 
 export default function Skill() {
   return (

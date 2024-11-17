@@ -1,8 +1,0 @@
-/* ===============CERTS========================== */
-.certs-list a:hover svg {
-  opacity: 0;
-}
-
-.certs-list a:hover::after {
-  opacity: 1;
-}

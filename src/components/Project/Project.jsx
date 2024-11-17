@@ -2,7 +2,6 @@ import projectData from "./projectData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import "./project.css";
 
 export default function Project() {
   return (

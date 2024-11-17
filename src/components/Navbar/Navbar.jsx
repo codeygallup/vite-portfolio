@@ -7,7 +7,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import "./navbar.css";
 
 export default function Navbar() {
   return (

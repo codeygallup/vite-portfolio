@@ -17,6 +17,96 @@ body {
   display: block;
 }
 
+
+/* -----------------------------------------------NAVBAR------------------------------------------------------ */
+
+.nav-bar a:hover svg,
+.sidebar-list a:hover svg {
+  opacity: 0;
+}
+
+.nav-bar a:hover::after,
+.sidebar-list a:hover::after {
+  opacity: 1;
+}
+
+.nav-bar a::after,
+.certs-list a::after,
+.project-set a::after {
+  content: "";
+  font-size: 30px;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+a.about-link::after {
+  content: "ABOUT";
+}
+
+a.skill-link::after {
+  content: "SKILLS";
+}
+
+a.project-link::after {
+  content: "PROJECTS";
+}
+
+a.contact-link::after {
+  content: "CONTACT";
+}
+
+a.active {
+  color: var(--color1);
+}
+
+@media all and (max-width: 800px) {
+  .nav-bar a::after,
+  .certs-list a::after,
+  .project-set a::after {
+    content: "";
+    font-size: 15px;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 5px;
+    left: -20px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+
+  a.about-link::after {
+    content: "ABOUT";
+  }
+
+  a.skill-link::after {
+    content: "SKILLS";
+  }
+
+  a.project-link::after {
+    content: "PROJECTS";
+  }
+
+  a.contact-link::after {
+    content: "CONTACT";
+  }
+
+  a.active {
+    color: var(--color1);
+  }
+}
+
+
 /* -----------------------------------------------SIDEBAR------------------------------------------------------ */
 
 .sidebar-list a::after {
@@ -69,4 +159,29 @@ a.credly-link::after {
     overflow-x: hidden;
     overflow-y: scroll;
   }
+}
+
+/* -----------------------------------------------PROJECTS------------------------------------------------------ */
+.overlay {
+  background: rgba(
+    47,
+    65,
+    79,
+    0.9
+  ); /* adjust background color and opacity as needed */
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.image-container:hover .overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ===============CERTS========================== */
+.certs-list a:hover svg {
+  opacity: 0;
+}
+
+.certs-list a:hover::after {
+  opacity: 1;
 }
