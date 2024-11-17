@@ -1,9 +1,9 @@
-import Animation from "./assets/GHAnimations.png";
-import Animation2 from "./assets/GHAnimations2.png";
-import Array from "./assets/GHArrayMethods.png";
-import Fundamental from "./assets/GHCodingFundamentals.png";
-import Fundamental2 from "./assets/GHCodingFundamentals2.png";
-import Debug from "./assets/GHDebugging.png";
+import Animation from "../../assets/GHAnimations.png";
+import Animation2 from "../../assets/GHAnimations2.png";
+import Array from "../../assets/GHArrayMethods.png";
+import Fundamental from "../../assets/GHCodingFundamentals.png";
+import Fundamental2 from "../../assets/GHCodingFundamentals2.png";
+import Debug from "../../assets/GHDebugging.png";
 
 export default function Grasshopper() {
   return (

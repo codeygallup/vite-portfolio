@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowsSpin, faCertificate } from "@fortawesome/free-solid-svg-icons";
 import { faFreeCodeCamp, faGoogle } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-import { techList } from "./technology-list";
+import { techList } from "../../data/technology-list";
 
 export default function Skill() {
   return (

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
-import { validateEmail } from "../utils/helper";
+import { validateEmail } from "./utils/helper";
 import emailjs from "@emailjs/browser";
-import UpdatedResume from "../assets/updatedResume.pdf";
+import UpdatedResume from "../../assets/updatedResume.pdf";
 
 export default function Contact() {
   const form = useRef();
