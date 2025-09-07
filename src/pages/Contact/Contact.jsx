@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { validateEmail } from "./utils/helper";
 import emailjs from "@emailjs/browser";
-import UpdatedResume from "../../assets/updatedResume.pdf";
+import Resume from "../../assets/Resume.pdf";
 
 export default function Contact() {
   const form = useRef();
@@ -101,7 +101,7 @@ export default function Contact() {
           <br />
           <a
             className="text-gray-200 no-underline hover:text-cyan-600"
-            href={UpdatedResume}
+            href={Resume}
             download="Codeys Resume"
           >
             Click here to download a copy
