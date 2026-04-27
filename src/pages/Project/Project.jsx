@@ -5,12 +5,16 @@ import Carousel from "../../components/Carousel";
 export default function Project() {
   const [view, setView] = useState("grid");
 
-  const btnBase = "toggle-btn rounded-md px-3 py-1.5 text-sm transition-colors border";
+  const btnBase =
+    "toggle-btn rounded-md px-3 py-1.5 text-sm transition-colors border";
   const active = "border-cyan-500 text-cyan-500 bg-cyan-500/10";
   const inactive = "border-transparent text-gray-400 hover:text-gray-200";
 
   return (
-    <div className={`w-full px-8 pb-12 fixed inset-x-0 top-32 bottom-0 ${view === "grid" ? "overflow-y-auto" : "overflow-hidden"}`}>
+    <div
+      className={`fixed inset-x-0 bottom-0 top-32 w-full px-8 pb-12 ${view === "grid" ? "overflow-y-auto" : "overflow-hidden"}`}
+    >
+      {/* Toggle buttons for switching between grid and carousel views */}
       <div className="mb-6 flex justify-end gap-2">
         <button
           onClick={() => setView("grid")}

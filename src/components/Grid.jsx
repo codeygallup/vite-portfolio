@@ -10,29 +10,24 @@ function ProjectCard({ project, allFrozen, tapped, onTap }) {
 
   return (
     <div
-      className="image-container group relative overflow-hidden rounded-lg cursor-pointer"
+      className="image-container group relative cursor-pointer overflow-hidden rounded-lg"
       onClick={onTap}
     >
-      <img
-        src={displaySrc}
-        alt={project.alt}
-        className="h-48 w-full md:h-64"
-      />
+      <img src={displaySrc} alt={project.alt} className="h-48 w-full md:h-64" />
       <div
-        className={`absolute inset-0 flex flex-col items-center justify-around gap-3 bg-black/70 p-4 text-gray-200 transition-opacity duration-200
-          ${tapped ? "opacity-100 visible" : "invisible opacity-0 group-hover:visible group-hover:opacity-100"}`}
+        className={`absolute inset-0 flex flex-col items-center justify-around gap-3 bg-black/70 p-4 text-gray-200 transition-opacity duration-200 ${tapped ? "visible opacity-100" : "invisible opacity-0 group-hover:visible group-hover:opacity-100"}`}
       >
         <div className="text-center">
-          <p className="text-lg font-medium">{project.title}</p>
+          <p className="text-2xl font-medium">{project.title}</p>
           {project.subtitle && (
-            <p className="text-sm text-gray-400">{project.subtitle}</p>
+            <p className="text-md text-gray-400">{project.subtitle}</p>
           )}
-          <p className="mt-1 text-sm text-gray-300">{project.tech}</p>
+          <p className="text-md mt-1 text-gray-300">{project.tech}</p>
           {project.downloads && (
-            <p className="mt-1 text-xs text-gray-400">⬇ {project.downloads}</p>
+            <p className="mt-1 text-sm text-gray-400">⬇ {project.downloads}</p>
           )}
         </div>
-        <div className="flex gap-20 text-2xl">
+        <div className="flex gap-20 text-3xl md:text-4xl">
           <a
             href={project.githubHref}
             rel="noreferrer"
@@ -69,7 +64,7 @@ export default function Grid() {
 
   return (
     <div
-      className="mx-auto grid grid-cols-1 max-w-5xl gap-4 md:grid-cols-2 md:gap-6"
+      className="mx-auto grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-6"
       onMouseEnter={() => setAnyHovered(true)}
       onMouseLeave={() => setAnyHovered(false)}
     >
