@@ -69,7 +69,7 @@ export default function Grid() {
 
   return (
     <div
-className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2 md:gap-6"
+      className="mx-auto grid grid-cols-1 max-w-5xl gap-4 md:grid-cols-2 md:gap-6"
       onMouseEnter={() => setAnyHovered(true)}
       onMouseLeave={() => setAnyHovered(false)}
     >

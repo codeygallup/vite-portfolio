@@ -10,7 +10,7 @@ export default function Project() {
   const inactive = "border-transparent text-gray-400 hover:text-gray-200";
 
   return (
-    <div className="w-full px-8 pb-12 fixed top-32">
+    <div className={`w-full px-8 pb-12 fixed inset-x-0 top-32 bottom-0 ${view === "grid" ? "overflow-y-auto" : "overflow-hidden"}`}>
       <div className="mb-6 flex justify-end gap-2">
         <button
           onClick={() => setView("grid")}
