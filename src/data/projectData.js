@@ -1,9 +1,10 @@
-import {  OnTask, Fatcat, QuikLogVSC, QuikLogJB, QuikLogVSCMarket, QuikLogJBMarket } from '../assets'
+import {  OnTask, Fatcat, QuikLogVSC, QuikLogJB, QuikLogVSCMarket, QuikLogJBMarket, OnTaskIcon, QuikLogIcon, FatcatIcon } from '../assets'
 
 const projectData = [
     {
         src: Fatcat,
         staticSrc: null,
+        sideSrc: FatcatIcon,
         alt: "Fatcat",
         title: "Fatcat",
         subtitle: null,
@@ -15,6 +16,7 @@ const projectData = [
     {
         src: QuikLogVSC,
         staticSrc: QuikLogVSCMarket,
+        sideSrc: QuikLogIcon,
         alt: "QuikLog VS Code",
         title: "QuikLog",
         subtitle: "VS Code",
@@ -26,6 +28,7 @@ const projectData = [
     {
         src: QuikLogJB,
         staticSrc: QuikLogJBMarket,
+        sideSrc: QuikLogIcon,
         alt: "QuikLog JetBrains",
         title: "QuikLog",
         subtitle: "JetBrains",
@@ -37,6 +40,7 @@ const projectData = [
     {
         src: OnTask,
         staticSrc: null,
+        sideSrc: OnTaskIcon,
         alt: "OnTask",
         title: "OnTask",
         subtitle: null,
