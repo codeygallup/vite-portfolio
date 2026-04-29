@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Grid from "../../components/Grid";
-import Carousel from "../../components/Carousel";
+import Grid from "../components/Grid";
+import Carousel from "../components/Carousel";
 
 export default function Project() {
   const [view, setView] = useState("grid");
