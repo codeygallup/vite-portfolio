@@ -114,10 +114,10 @@ a.active {
   letter-spacing: 2px;
   position: absolute;
   bottom: 2px;
-  left: -22px;
-  display: block;
-  width: 100%;
-  text-align: center;
+  right: 0;
+  left: auto;
+  width: max-content;
+  text-align: right;
   opacity: 0;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;

@@ -49,7 +49,7 @@ export default function Navbar() {
             href="https://github.com/codeygallup"
             rel="noreferrer"
             target="_blank"
-            className="ga-icon absolute right-8 top-2 sm:right-12"
+            className="ga-icon absolute right-8 top-3 sm:right-12"
           >
             <FontAwesomeIcon icon={faGithubSquare} />
           </a>
@@ -57,7 +57,7 @@ export default function Navbar() {
             href="https://linkedin.com/in/codey-gallup"
             rel="noreferrer"
             target="_blank"
-            className="li-icon absolute right-8 top-[4rem] sm:right-12"
+            className="li-icon absolute right-8 top-14 sm:right-12"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </a>

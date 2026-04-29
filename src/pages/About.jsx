@@ -9,23 +9,20 @@ export default function About() {
           src={ProfilePicture}
           alt="me"
           className="about-pic h-96 rounded-[25%] md:mx-10"
-        ></img>
-        <div className="">
+        />
+        <div>
           <p className="m-8 text-xl sm:w-[80%] lg:m-24 lg:text-2xl">
-            Hello! My name is Codey, and I am an aspiring web developer with a
-            background as an apprentice electrician. I have always had a passion
-            for technology and its ability to solve complex problems, and I have
-            found that web development is the perfect way for me to use my
-            skills and experience to make a positive impact.
+            Hi, I'm Codey — a Software Development Engineer in Test based in
+            Colorado Springs. I work at Clover building and maintaining API test
+            suites with Karate and Gherkin, optimizing CI/CD pipelines in
+            Jenkins, and keeping codebases clean and maintainable.
           </p>
           <p className="m-8 text-xl sm:w-[80%] lg:m-24 lg:text-2xl">
-            As an apprentice electrician, I have gained hands-on experience
-            working with complex systems, and I have a strong understanding of
-            the technical concepts and processes that are necessary for success
-            in the industry. I am excited to bring this experience to my work as
-            a web developer, and I am confident that I can help businesses and
-            organizations achieve their goals through cutting-edge web
-            solutions.
+            Outside of work I build full-stack projects. My latest is Fatcat, a
+            personal finance app built with Vue 3, Spring Boot, and PostgreSQL.
+            I also published QuikLog, a productivity extension available on both
+            the VS Code and JetBrains marketplaces that speeds up debug logging
+            across multiple languages.
           </p>
         </div>
       </div>
