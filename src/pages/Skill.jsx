@@ -22,7 +22,9 @@ export default function Skill() {
                   <p className="mb-3 text-xs uppercase tracking-widest text-cyan-200">
                     {cat.label}
                   </p>
-                  <div className="mb-3 flex flex-wrap gap-3">
+                  <div
+                    className={`mb-3 flex flex-wrap gap-3 ${cat.icons.length > 5 ? "max-w-64 md:max-w-none" : ""}`}
+                  >
                     {cat.icons.map((icon) => (
                       <img
                         key={icon}
