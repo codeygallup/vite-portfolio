@@ -1,20 +1,21 @@
-import ORM from "./orm.png";
-import Jate from "./jate.png";
-import TechTalk from "./techtalk.png";
-import Scribe from "./scribe.png";
-import OnTask from "./full-ontask.png";
-import OnTaskIcon from './ot-alt.png'
-import Employee from "./mysqletrack.png";
-import Hangman from "./starhang.png";
-import Book from "./booksearch.png";
-import Weather from './weather.png'
-import Fatcat from "./fatcat.png"
-import FatcatIcon from './Fatcats.png';
-import OnTaskGif from "./ontask.gif"
+import OnTask from "./ontask.webp";
+import OnTaskIcon from "./ontask-icon.webp";
+import Fatcat from "./fatcat.webp";
+import FatcatIcon from "./fatcat-icon.webp";
 import QuikLogVSC from "./vscode-quiklog.gif";
 import QuikLogJB from "./jetbrains-quiklog.gif";
-import QuikLogJBMarket from "./qljb-market.png"
-import QuikLogVSCMarket from "./qlvsc-market.png"
-import QuikLogIcon from './ql-alt.png'
+import QuikLogJBMarket from "./qljb-market.webp";
+import QuikLogVSCMarket from "./qlvsc-market.webp";
+import QuikLogIcon from "./quiklog-icon.webp";
 
-export { ORM, Jate, TechTalk, Scribe, OnTask, Employee, Hangman, Book, Weather, Fatcat, OnTaskGif, QuikLogVSC, QuikLogJB, QuikLogJBMarket, QuikLogVSCMarket, QuikLogIcon, OnTaskIcon, FatcatIcon };
+export {
+  OnTask,
+  OnTaskIcon,
+  Fatcat,
+  FatcatIcon,
+  QuikLogVSC,
+  QuikLogJB,
+  QuikLogJBMarket,
+  QuikLogVSCMarket,
+  QuikLogIcon,
+};
