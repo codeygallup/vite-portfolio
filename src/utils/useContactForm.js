@@ -9,6 +9,8 @@ const validateEmail = (email) => {
 
 export const useContactForm = () => {
   const form = useRef();
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
   // Starts the contact form blank
   const [contactFormState, setContactFormState] = useState({
     email: "",
@@ -16,6 +18,7 @@ export const useContactForm = () => {
     message: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
+  const errorTimer = useRef(null);
   const { email, subject, message } = contactFormState;
 
   function handleContact(e) {
@@ -26,16 +29,29 @@ export const useContactForm = () => {
       if (!value.length) error = "Email is required";
       else if (!validateEmail(value)) error = "Please enter a valid email!";
     } else if (!value.length) {
-      error = `${name} is required`;
+      const fieldName = name.charAt(0).toUpperCase() + name.slice(1);
+      error = `${fieldName} is required`;
     }
 
     setErrorMessage(error);
+    if (error) {
+      clearTimeout(errorTimer.current);
+      errorTimer.current = setTimeout(() => setErrorMessage(""), 3000);
+    }
+
     if (!error) setContactFormState((prev) => ({ ...prev, [name]: value }));
   }
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    const { email, subject, message } = contactFormState;
+    if (!email || !subject || !message) {
+      setErrorMessage("Please fill out all fields before sending.");
+      return;
+    }
+
+    setLoading(true);
     emailjs
       .sendForm(
         "service_r9ozccg",
@@ -44,13 +60,10 @@ export const useContactForm = () => {
         "cRjguA3pkusSgJPh5",
       )
       .then(
-        (result) => {
-          window.location.reload();
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
+        () => setSent(true),
+        (error) => console.log(error.text),
+      )
+      .finally(() => setLoading(false));
   };
 
   return {
@@ -61,5 +74,7 @@ export const useContactForm = () => {
     email,
     subject,
     message,
+    sent,
+    loading,
   };
 };
