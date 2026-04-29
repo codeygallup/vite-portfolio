@@ -1,12 +1,12 @@
-import OnTask from "./ontask.png";
-import OnTaskIcon from "./ontask-icon.png";
-import Fatcat from "./fatcat.png";
-import FatcatIcon from "./fatcat-icon.png";
+import OnTask from "./ontask.webp";
+import OnTaskIcon from "./ontask-icon.webp";
+import Fatcat from "./fatcat.webp";
+import FatcatIcon from "./fatcat-icon.webp";
 import QuikLogVSC from "./vscode-quiklog.gif";
 import QuikLogJB from "./jetbrains-quiklog.gif";
-import QuikLogJBMarket from "./qljb-market.png";
-import QuikLogVSCMarket from "./qlvsc-market.png";
-import QuikLogIcon from "./quiklog-icon.png";
+import QuikLogJBMarket from "./qljb-market.webp";
+import QuikLogVSCMarket from "./qlvsc-market.webp";
+import QuikLogIcon from "./quiklog-icon.webp";
 
 export {
   OnTask,
