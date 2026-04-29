@@ -31,7 +31,7 @@ body {
 }
 
 .nav-bar a::after,
-.certs-list a::after,
+/* .certs-list a::after, */
 .project-set a::after {
   content: "";
   font-size: 30px;
@@ -69,7 +69,6 @@ a.active {
 
 @media all and (max-width: 800px) {
   .nav-bar a::after,
-  .certs-list a::after,
   .project-set a::after {
     content: "";
     font-size: 15px;
@@ -132,56 +131,9 @@ a.li-icon::after {
   content: "LinkedIn";
 }
 
-a.fcc-link::after {
-  content: "freeCodeCamp";
-  top: 30%;
-}
-
-a.sololearn-link::after {
-  content: "Sololearn";
-  top: 30%;
-  left: 3%;
-}
-
-a.grasshopper-link::after {
-  content: "Grasshopper";
-  top: 28%;
-}
-
-a.credly-link::after {
-  content: "Credly";
-  top: 25%;
-  left: 6%;
-}
-
 @media all and (max-width: 800px) {
   body {
     overflow-x: hidden;
     overflow-y: scroll;
   }
-}
-
-/* -----------------------------------------------PROJECTS------------------------------------------------------ */
-.overlay {
-  background: rgba(
-    47,
-    65,
-    79,
-    0.9
-  ); /* adjust background color and opacity as needed */
-  transition: visibility 0s, opacity 0.3s linear;
-}
-
-.image-container:hover .overlay {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* ===============CERTS========================== */
-.certs-list a:hover svg {
-  opacity: 0;
-}
-
-.certs-list a:hover::after {
-  opacity: 1;
 }
