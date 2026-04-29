@@ -1,63 +1,16 @@
-import { useRef, useState } from "react";
-import { validateEmail } from "../utils/helper";
-import emailjs from "@emailjs/browser";
 import Resume from "../assets/Resume.pdf";
+import { useContactForm } from "../utils/useContactForm.js";
 
 export default function Contact() {
-  const form = useRef();
-  // Starts the contact form blank
-  const [contactFormState, setContactFormState] = useState({
-    email: "",
-    subject: "",
-    message: "",
-  });
-  const [errorMessage, setErrorMessage] = useState("");
-  const { email, subject, message } = contactFormState;
-
-  function handleContact(e) {
-    // Checks if all fields have been entered and validating email
-    if (e.target.name === "email") {
-      const validEmail = validateEmail(e.target.value);
-      if (!validEmail) {
-        setErrorMessage("Please enter a valid email!");
-      } else {
-        setErrorMessage("");
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required`);
-      } else {
-        setErrorMessage("");
-      }
-    }
-
-    if (!errorMessage) {
-      setContactFormState({
-        ...contactFormState,
-        [e.target.name]: e.target.value,
-      });
-    }
-  }
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm(
-        "service_r9ozccg",
-        "template_i728ryi",
-        e.target,
-        "cRjguA3pkusSgJPh5",
-      )
-      .then(
-        (result) => {
-          window.location.reload();
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
-  };
+  const {
+    form,
+    errorMessage,
+    handleContact,
+    sendEmail,
+    email,
+    subject,
+    message,
+  } = useContactForm();
 
   return (
     <div className="mx-5 flex flex-col items-center text-center text-lg md:mt-10 md:grid md:grid-cols-5 md:gap-x-28 md:text-xl">
