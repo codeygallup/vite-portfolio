@@ -1,4 +1,10 @@
-export const techCategories = [
+interface TechCategory {
+  label: string;
+  skills: string[];
+  icons: string[];
+}
+
+export const techCategories: TechCategory[] = [
   {
     label: "Languages",
     skills: ["JavaScript", "TypeScript", "Java", "Python", "Kotlin"],
