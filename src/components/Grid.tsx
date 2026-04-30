@@ -4,13 +4,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-function ProjectCard({ project, allFrozen, tapped, onTap }) {
+interface ProjectCardProps {
+  project: typeof projectData[0];
+  allFrozen: boolean;
+  tapped: boolean;
+  onTap: () => void;
+}
+
+function ProjectCard({ project, allFrozen, tapped, onTap }: ProjectCardProps) {
   const displaySrc =
     allFrozen && project.staticSrc ? project.staticSrc : project.src;
 
   return (
     <div
-      className="image-container group relative cursor-pointer overflow-hidden rounded-lg"
+      className="image-container group relative overflow-hidden rounded-lg"
       onClick={onTap}
     >
       <img src={displaySrc} alt={project.alt} className="h-48 w-full md:h-64" />
@@ -55,10 +62,10 @@ function ProjectCard({ project, allFrozen, tapped, onTap }) {
 }
 
 export default function Grid() {
-  const [anyHovered, setAnyHovered] = useState(false);
-  const [tappedIdx, setTappedIdx] = useState(null);
+  const [anyHovered, setAnyHovered] = useState<boolean>(false);
+  const [tappedIdx, setTappedIdx] = useState<number | null>(null);
 
-  function handleTap(idx) {
+  function handleTap(idx: number) {
     setTappedIdx((prev) => (prev === idx ? null : idx));
   }
 

@@ -1,5 +1,5 @@
 import Resume from "../assets/Resume.pdf";
-import { useContactForm } from "../utils/useContactForm.js";
+import { useContactForm } from "../utils/useContactForm";
 
 export default function Contact() {
   const {

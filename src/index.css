@@ -136,4 +136,10 @@ a.li-icon::after {
     overflow-x: hidden;
     overflow-y: scroll;
   }
+  .sidebar-list a::after {
+    display: none;
+  }
+  .sidebar-list a:hover svg {
+    opacity: 1;
+  }
 }
